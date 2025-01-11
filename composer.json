@@ -1,0 +1,13 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "stripe/stripe-php": "^16.4",
+        "instamojo/instamojo-php": "^1.0",
+        "paypal/paypal-server-sdk": "dev-main",
+        "paypal/paypal-checkout-sdk": "dev-develop",
+        "paypal/rest-api-sdk-php": "dev-master",
+        "mpdf/mpdf": "dev-development",
+        "twilio/sdk": "dev-main"
+    },
+    "minimum-stability": "dev"
+}

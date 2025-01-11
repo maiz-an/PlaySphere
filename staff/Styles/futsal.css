@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&family=Lato&family=Montserrat&family=Poppins&family=Oswald&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 5px;
+    border: 2px solid #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #bbd12b;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #a3c61f;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #307e1a #1e1e1e;
+}
+
+.horizontal-scroll {
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #444 #1e1e1e;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #161313;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.container h1 {
+    text-align: center;
+    color: #bbd12b;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#add-futsal-btn {
+    display: inline-block;
+    margin: 10px auto 20px auto;
+    padding: 10px 20px;
+    background-color: #bbd12b;
+    color: #161313;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#add-futsal-btn:hover {
+    background-color: #a3c61f;
+    transform: scale(1.05);
+}
+
+#add-futsal-form {
+    margin-top: 20px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    flex: 100%;
+}
+
+form label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ddd;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea,
+form select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #252525;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+form textarea {
+    resize: none;
+}
+
+.submit-btn {
+    background-color: #bbd12b;
+    color: #161313;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+}
+
+.submit-btn:hover {
+    background-color: #a3c61f;
+    transform: scale(1.05);
+}
+
+
+.futsal-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.futsal-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.futsal-card:hover {
+    transform: translateY(-5px);
+}
+
+.futsal-card img {
+    max-width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.futsal-card h3 {
+    color: #bbd12b;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.futsal-card p {
+    color: #ddd;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.edit-btn, .delete-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.edit-btn {
+    background-color: #bbd12b;
+    color: #161313;
+}
+
+.edit-btn:hover {
+    background-color: #a3c61f;
+    transform: scale(1.05);
+}
+
+.delete-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c9302c;
+    transform: scale(1.05);
+}
+
+.delete-form {
+    display: inline;
+}
