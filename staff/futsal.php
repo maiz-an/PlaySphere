@@ -567,7 +567,7 @@ $futsals = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <div class="form-row">
                     <div class="form-group full-width">
                         <label for="image">Upload Image:</label>
-                        <input type="file" id="image" name="image" accept="image/*">
+                        <input type="file" id="image" name="image" accept="image/*" required>
                     </div>
                 </div>
 
