@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 require 'db.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -123,7 +123,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booking_id'])) {
     <p class='footer'>Need help? Contact us at <a href='mailto:support@playsphere.com' style='color: #bbd12b;'>support@playsphere.com</a></p>
 </div>";
 
-        $mpdf = new Mpdf();
+$mpdf = new Mpdf(['tempDir' => 'C:/wamp64/www/PlaySphere/tmp']);
+
         $mpdf->WriteHTML($html);
         $pdfFilePath = "{$receiptsDir}/Refund_Receipt_{$bookingId}.pdf";
         $mpdf->Output($pdfFilePath, \Mpdf\Output\Destination::FILE);

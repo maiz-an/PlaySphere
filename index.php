@@ -5,14 +5,15 @@ $futsals = [];
 try {
     $stmt = $pdo->prepare("
         SELECT f.id, f.name, f.location, f.price_per_hour, f.description, f.image,
-               (SELECT GROUP_CONCAT(CONCAT(b.start_time, '|', b.end_time)) 
-                FROM bookings b 
-                WHERE b.futsal_id = f.id 
-                  AND b.start_time <= NOW() 
-                  AND b.end_time > NOW() 
-                  AND b.status NOT IN ('cancelled', 'refunded')) AS bookings
-        FROM futsals f
-        ORDER BY f.name ASC
+       (SELECT GROUP_CONCAT(CONCAT(b.start_time, '|', b.end_time)) 
+        FROM bookings b 
+        WHERE b.futsal_id = f.id 
+          AND b.start_time >= NOW() 
+          AND b.start_time <= DATE_ADD(NOW(), INTERVAL 7 DAY)
+          AND b.status NOT IN ('cancelled', 'refunded')) AS bookings
+FROM futsals f
+ORDER BY f.name ASC;
+
     ");
     $stmt->execute();
     $futsals = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -201,16 +202,16 @@ try {
                                             list($start, $end) = explode('|', $booking);
                                             $startDate = new DateTime($start);
                                             $endDate = new DateTime($end);
-                                            $now = new DateTime();
                                             // Determine the display label
-                                            if ($startDate->format('Y-m-d') === $now->format('Y-m-d')) {
+                                            if ($startDate->format('Y-m-d') === (new DateTime())->format('Y-m-d')) {
                                                 $label = "Today";
-                                            } elseif ($startDate->format('Y-m-d') === $now->modify('+1 day')->format('Y-m-d')) {
+                                            } elseif ($startDate->format('Y-m-d') === (new DateTime())->modify('+1 day')->format('Y-m-d')) {
                                                 $label = "Tomorrow";
                                             } else {
-                                                $label = $startDate->format('Y-m-d');
+                                                $label = $startDate->format('d F Y');
                                             }
-                                            echo "<span>{$label}: {$startDate->format('H:i')} to {$endDate->format('H:i')}</span><br>";
+                                            // Change time format to 12-hour format with AM/PM
+                                            echo "<span>{$label} : {$startDate->format('g:i A')} to {$endDate->format('g:i A')}</span><br>";
                                         }
                                     } else {
                                         echo 'No bookings yet';

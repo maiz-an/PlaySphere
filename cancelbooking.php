@@ -124,7 +124,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booking_id'])) {
 </div>";
 
 
-            $mpdf = new Mpdf();
+            $mpdf = new Mpdf(['tempDir' => 'C:/wamp64/www/PlaySphere/tmp']);
             $mpdf->WriteHTML($html);
             $pdfFilePath = "receipts/Refund_Receipt_{$bookingId}.pdf";
             $mpdf->Output($pdfFilePath, \Mpdf\Output\Destination::FILE);
