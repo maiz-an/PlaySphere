@@ -59,7 +59,7 @@ openssl.cafile = "C:\wamp64\bin\php\cacert.pem"
 ---
 
 ```
-### 3. Set Up Your Email Configuration
+### 4. Set Up Your Email Configuration
 
 You can either use an **existing email account** or create a **new one** specifically for sending emails.
 
@@ -75,7 +75,7 @@ You can either use an **existing email account** or create a **new one** specifi
 
 ---
 
-### 4. Testing the Setup
+### 5. Testing the Setup
 
 Once you’ve completed the configuration, **test the application** by running it on your local server. 
 
