@@ -144,7 +144,7 @@ try {
         <tr><td>Total Cost:</td><td>Rs. {$bookingDetails['total_cost']}</td></tr>
         <tr><td>Payment ID:</td><td>{$paymentId}</td></tr>
     </table>
-    <p class='footer'>Need help? Contact us at <a href='mailto:mohamedmaizanmunas@gmail.com' style='color: #bbd12b;'>support@playsphere.com</a></p>
+    <p class='footer'>Need help? Contact us at <a href='mailto:Rizkhanrk01@gmail.com' style='color: #bbd12b;'>support@playsphere.com</a></p>
 </div>";
 
 
@@ -159,13 +159,13 @@ try {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'mohammedmaizan@gmail.com';
-            $mail->Password = 'ocbocejxyxquwxic';
+            $mail->Username = 'Rizkhanrk01@gmail.com';
+            $mail->Password = 'kzbgnttfcpxrnvci';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
             // Email to Customer
-            $mail->setFrom('mohammedmaizan@gmail.com', 'PlaySphere');
+            $mail->setFrom('Rizkhanrk01@gmail.com', 'PlaySphere');
             $mail->addAddress($customerEmail);
             $mail->addAttachment($pdfFilePath);
 

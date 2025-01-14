@@ -42,12 +42,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['send_otp'])) {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'mohammedmaizan@gmail.com';
-            $mail->Password = 'ocbocejxyxquwxic';
+            $mail->Username = 'Rizkhanrk01@gmail.com';
+            $mail->Password = 'kzbgnttfcpxrnvci';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
-            $mail->setFrom('mohammedmaizan@gmail.com', 'PlaySphere');
+            $mail->setFrom('Rizkhanrk01@gmail.com', 'PlaySphere');
             $mail->addAddress($email);
 
             $mail->isHTML(true);
@@ -111,6 +111,10 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forgot Password - PlaySphere</title>
+    <link rel="icon" type="image/png" href="images/fav.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="Styles/index.css" rel="stylesheet">
     <style>

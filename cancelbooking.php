@@ -120,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booking_id'])) {
         <tr><td>Status:</td><td>Refund Requested</td></tr>
     </table>
     <p>Please note that a cancellation fee of Rs. 100/- will be deducted from your refund amount.</p>
-    <p class='footer'>Need help? Contact us at <a href='mailto:mohamedmaizanmunas@gmail.com' style='color: #bbd12b;'>support@playsphere.com</a></p>
+    <p class='footer'>Need help? Contact us at <a href='mailto:Rizkhanrk01@gmail.com' style='color: #bbd12b;'>support@playsphere.com</a></p>
 </div>";
 
 
@@ -134,13 +134,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['booking_id'])) {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'mohammedmaizan@gmail.com';
-            $mail->Password = 'ocbocejxyxquwxic';
+            $mail->Username = 'Rizkhanrk01@gmail.com';
+            $mail->Password = 'kzbgnttfcpxrnvci';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
             // Email to futsal owner
-            $mail->setFrom('mohammedmaizan@gmail.com', 'PlaySphere');
+            $mail->setFrom('Rizkhanrk01@gmail.com', 'PlaySphere');
             $mail->addAddress($booking['owner_email']);
             $mail->isHTML(true);
             $mail->Subject = "Booking Cancellation - Refund Required";

@@ -15,7 +15,7 @@ $staffName = htmlspecialchars($_SESSION['username']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Servior Dashboard | PlaySphere</title>
+    <title>Vender Dashboard | PlaySphere</title>
     <link rel="icon" type="image/png" href="../images/fav.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
@@ -422,7 +422,7 @@ $staffName = htmlspecialchars($_SESSION['username']);
 </div>
 
 <footer class="footer">
-    <p>&copy; 2025 PlaySphere | Futsal Servior Dashboard Designed by team <a href="mailto:co.dex11@hotmail.com">CodeX11</a></p>
+    <p>&copy; 2025 PlaySphere | Futsal Vender Dashboard Designed by team PlaySphere</p>
 </footer>
 
     <!-- Floating Button -->
@@ -435,7 +435,7 @@ $staffName = htmlspecialchars($_SESSION['username']);
         <div class="overlay-content">
             <h2>Contact Us</h2>
             <p style="font-size: 16px;">We'd love to hear from you! Reach out to us for any inquiries or support. <br>
-            &copy; 2025 PlaySphere | Designed by team <a href="mailto:co.dex11@hotmail.com?subject=Website%20Inquiry&body=I%20would%20like%20to%20learn%20more%20about..." target="_blank" style="z-index: -1;" style="text-decoration: underline; color: #bbd12b;" >CodeX11</a></p>
+            &copy; 2025 PlaySphere | Designed by team PlaySphere</p>
             
             <form action="contact.php" method="post" class="contact-form">
                 <label for="contact-name">Name</label>

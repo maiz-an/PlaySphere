@@ -20,14 +20,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'mohammedmaizan@gmail.com';
-        $mail->Password = 'ocbocejxyxquwxic';
+        $mail->Username = 'Rizkhanrk01@gmail.com';
+        $mail->Password = 'kzbgnttfcpxrnvci';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // Recipients
-        $mail->setFrom('mohammedmaizan@gmail.com', 'PlaySphere Contact Form');
-        $mail->addAddress('mohamedmaizanmunas@gmail.com');
+        $mail->setFrom('Rizkhanrk01@gmail.com', 'PlaySphere Contact Form');
+        $mail->addAddress('Rizkhanrk01@gmail.com');
 
         // Content
         $mail->isHTML(true);

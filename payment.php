@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'vendor/autoload.php';
-ob_start(); // Add this at the top of your script
+ob_start();
 error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE);
 
 

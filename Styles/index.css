@@ -683,16 +683,16 @@ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 28rem;
     height: auto;
-    margin-top: -39rem;
-    margin-left: -50rem;
+    margin-top: -32rem;
+    margin-left: -40rem;
 }
 
 .loginimg1{
     position: fixed;
-    width: 18rem;
+    width: 26rem;
     height: auto;
     margin-top: -13rem;
-    margin-left: 35rem;
+    margin-left: 28rem;
 }
 .loginimg2{
     position: fixed;
